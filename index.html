@@ -1,47 +1,293 @@
-<!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-		<title>reveal.js</title>
-
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
-
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
-
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
+  <head>
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css" id="theme">
+  </head>
+  <body>
+<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+				<section>
+					<section>
+						<h2>Blockchain, cryptography, cryptocurrencies</h2>
+						<br>
+						<h3>Topic: An exploration</h3>
+					</section>
+					<section>
+						<p>Contact info:</p>
+						<ul>
+							<small>
+							<li>Twitter: @darpanbiswas</li>
+							</small>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Key Topics</h2>
+						<table>
+							<tr class="fragment fade-top">
+								<td>Philosophical:</td>
+								<td class="fragment highlight-blue">why is it a revolutionary idea</td>
+							</tr>
+							<tr class="fragment fade-top ">
+								<td>Scientific:</td>
+								<td>algorithms, CS , and math</td>
+							</tr>
+							<tr class="fragment fade-top ">
+								<td>Commerce:</td>
+								<td>changes to industry</td>
+							</tr>
+							<tr class="fragment fade-top">
+								<td>Capital:</td>
+								<td>risk / reward and asset allocation</td>
+							</tr>
+							<tr class="fragment fade-top ">
+								<td>Infrastructure:</td>
+								<td>code, servers, data centers, etc.</td>
+							</tr>
+						</table>
+					</section>
+
+				</section>
+<section>
+  <section>
+    <h1>Philosophical</h1>
+  </section>
+  <section>
+    <h2>Motivation</h2>
+    <p>Who is anyone......<br>
+    <p class="fragment">......to someone else?
+  </section>
+  <section>
+    <h3>As a family member</h3>
+      <ul>
+        <li>Parent</li>
+        <li>Spouse</li>
+        <li>Offspring</li>
+        <li>Sibling</li>
+	<li>....</li>
+      </ul>
+  </section>
+  <section>
+    <h3>As a citizen</h3>
+      <ul>
+        <li>Tax payer</li>
+        <li>Passport holder</li>
+        <li>Vehicle driver</li>
+        <li>Serviceman or civilian</li>
+	<li>....</li>
+      </ul>
+  </section> 
+  <section>
+    <h3>As a part of traditional society</h3>
+      <ul>
+        <li>Team member</li>
+        <li>Partner or employee</li>
+        <li>Full time or part time</li>
+	<li>Bank account holder</li>
+	<li>....</li>
+      </ul>
+  </section> 
+  <section>
+    <h3>As an internet user</h3>
+      <ul>
+        <li>Email address(es)</li>
+        <li>Social network account(s)</li>
+        <li>Online bank accounts</li>
+        <li>Online credit ratings</li>
+	<li>....</li>
+      </ul>
+  </section> 
+  <section>
+    <h3>Thinking about this visually</h3>
+  </section>
+  <section class="fig-container"
+    data-fig-id="fig-collision-detection"
+    data-file="plot_1.html">
+  </section>
+  <section>
+    <h3 class="highlight-blue">Thinking about this visually</h3>
+    <img class="fragment" data-src="images/plot_1.png" height="80%" style="border:none">
+  </section>
+  <section>
+    Services provided by business or government
+    <img class="fragment" data-src="images/plot_2.png" height="80%" style="border:none">
+  </section>
+  <section>
+    <h3>Information and power</h3>
+    <ul>
+      <li class="fragment">Intermediaries derisk our interactions / transactions </li>
+      <li class="fragment">We expend our capital and provide our information</li>
+      <li class="fragment">In return we receive a service</li>
+      <li class="fragment">Implictly, we expect that the providers will not draw value out of the information</li>
+      <li class="fragment">This is unenforceable</li>
+      <li class="fragment">So it's merely trust</li>
+    </ul>
+  </section>
+  <section>
+    Supporters of blockchain technologies believe this power is asymmetrically in favor of the providers
+      <img class="fragment" data-src="images/plot_3.png" height="80%" style="border:none">
+  </section>
+  <section>
+    <h5>Closest relationships</h5>
+      <img data-src='images/plot_3.png' height="80%" style="border:none">
+  </section>
+  <section>
+    <h5>Closest relationships</h5>
+      <img data-src='images/plot_4.png' height="80%" style="border:none">
+  </section>
+  <section>
+    <h5>Closest relationships</h5>
+      <img data-src='images/plot_5.png' height="80%" style="border:none">
+  </section>
+  <section>
+    <h5>Closest relationships</h5>
+      <img data-src='images/plot_6.png' height="80%" style="border:none">
+  </section>
+  <section>
+    <h5>Closest relationships</h5>
+      <img data-src='images/plot_7.png' height="80%" style="border:none">
+  </section>
+</section>
+<section>
+  <section>
+    <h1>Science and math</h1>
+  </section>  
+  <section data-markdown>
+    ##### Implemetation of 3 abstract concepts
+      1. Provide information 
+      2. Process information
+      3. Receive information
+  </section>
+  <section data-markdown>
+    ##### Tweet 
+      1. Provide text to a tweet 
+      2. Twitter parses, ensures length compliance, checks for abuse, publishes, and then might even announce it 
+      3. You see confirmation that your tweet has been posted
+  </section>
+  <section data-markdown>
+    ##### Credit card purchase 
+      1. Physically swipe card thus providing your unique id (credit card #); specify amount 
+      2. Visa through its network approves or declines the request based on credit of the requestor, other risks 
+      3. You are approved or declined
+  </section>
+  <section data-markdown>
+    ##### These two things are same in terms of the mathematical representation 
+      1. They feel different because they have different economic impacts on us
+      2. But's only because we attach utility to these things
+      3. If tomrrow, the issue of hunger, learning, shelter were solved, then we would value communication much more
+      4. A world that values tweets (social interaction) more than money, is not entirely inconceivable
+      5. *The math remains the same*
+  </section>
+  <section data-markdown>
+    ### If you disagree, we should stop and discuss
+  </section>
+  <section data-markdown>
+    ##### To do all these things, the institution needs
+    1. Your unique id. They need to know who you are.
+    2. Prior history. 
+    3. Means of communication.
+  </section>
+  <section data-markdown>
+    ##### Unique id
+    - There is a unique id for virtually anything you consume
+    - The provider of this unique id has information and that information is stored
+    - The cost of switching ids is costly
+  </section>
+  <section data-markdown>
+    ##### Prior history 
+    - Your prior history is either kept as a series of records that are interconnected
+    - Or, captured as a single unit - think of your credit score, or the check mark on your Twitter account
+    - Typically, information (from the perspective of the provider) is not lost
+  </section>
+  <section data-markdown>
+    ##### Institutions already use a chain
+    - It consists of relational databases
+    - It is hierarchical (there is a reason why organizations have turf wars)
+    - It is constantly being updated
+
+    *Sound familiar?*
+  </section>
+  <section data-markdown>
+    ##### Means of communication
+    - Digital 
+    - Physical 
+  </section>
+  <section data-markdown>
+    ##### Blockchain transforms these principles
+    1. There are unique ids. But they cannot be tied to you.
+    2. Information is encoded in blocks of time; transactions are related but not in a hierarchical way
+    3. Still need some form of digital connection
+  </section>
+  <section data-markdown>
+    ## Let's cover the information encoding piece first
+  </section>
+  <section data-markdown>
+    ##### Consider the credit scoring algorithm
+    - From credit events (green)...
+    - ...a credit score is determined
+  </section>
+  <section>
+    <img class="fragment" data-src="./images/plot_credit_score_encoding_01.png" height="80%" style="border:none">
+  </section>
+  <section data-markdown>
+    ##### Consider the credit scoring algorithm
+    - From credit events (green)...
+    - ...a credit score is determined
+    - ...through an algorithm
+  </section>
+  <section>
+    <img class="fragment" data-src="./images/plot_credit_score_encoding_02.png" height="80%" style="border:none">
+  </section>
+  <section data-markdown>
+    ##### Consider the credit scoring algorithm
+    - Things get added all the time
+    - Other things are removed over time or after a dispute
+  </section>
+  <section>
+    <img class="fragment" data-src="./images/plot_credit_score_encoding_03.png" height="80%" style="border:none">
+  </section>
+  <section data-markdown>
+    ## So how does a blockchain capture this same information 
+  </section>
+  <section>
+    <img class="fragment" data-src="./images/plot_credit_score_encoding_04.png" height="80%" style="border:none">
+  </section>
+  <section data-markdown>
+    ##### As more events occur, more nodes are added 
+  </section>
+  <section>
+    <img class="fragment" data-src="./images/plot_credit_score_encoding_05.png" height="80%" style="border:none">
+  </section>
+  <section data-markdown>
+    ##### Nodes cannot be removed
+    But a new node can be added that says that a prior event is disputed
+  </section>
+  <section>
+    <img class="fragment" data-src="./images/plot_credit_score_encoding_06.png" height="80%" style="border:none">
+  </section>
+</section>
+</div>
 		</div>
-
-		<script src="lib/js/head.min.js"></script>
+		<script src="js/head.js"></script>
+		<script src="js/d3.v4.js"></script>
 		<script src="js/reveal.js"></script>
-
 		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+
+					// Interpret Markdown in <section> elements
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+
+					// Syntax highlight for <code> elements
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+
+					// Zoom in and out with Alt+click
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'node_modules/reveal.js-d3js/d3js.js' }
 				]
 			});
 		</script>
