@@ -99,13 +99,6 @@
       </ul>
   </section> 
   <section>
-    <h3>Thinking about this visually</h3>
-  </section>
-  <section class="fig-container"
-    data-fig-id="fig-collision-detection"
-    data-file="plot_1.html">
-  </section>
-  <section>
     <h3 class="highlight-blue">Thinking about this visually</h3>
     <img class="fragment" data-src="images/plot_1.png" height="80%" style="border:none">
   </section>
@@ -125,28 +118,34 @@
     </ul>
   </section>
   <section>
-    Supporters of blockchain technologies believe this power is asymmetrically in favor of the providers
-      <img class="fragment" data-src="images/plot_3.png" height="80%" style="border:none">
+      <img data-src="images/trust_02.png" height="80%" style="border:none">
   </section>
   <section>
-    <h5>Closest relationships</h5>
-      <img data-src='images/plot_3.png' height="80%" style="border:none">
+      <img data-src="images/trust_01.png" height="80%" style="border:none">
+  </section>
+  <section>
+    Supporters of blockchain technologies believe this power is asymmetrically in favor of the providers
+      <img class="fragment" data-src="images/plot_3.png" height="80%" style="border:none">
   </section>
   <section>
     <h5>Closest relationships</h5>
       <img data-src='images/plot_4.png' height="80%" style="border:none">
   </section>
   <section>
-    <h5>Closest relationships</h5>
+    <h5>Transactional relationships</h5>
       <img data-src='images/plot_5.png' height="80%" style="border:none">
   </section>
   <section>
-    <h5>Closest relationships</h5>
+    <h5>Informational advantage in transactional relationships</h5>
       <img data-src='images/plot_6.png' height="80%" style="border:none">
   </section>
   <section>
-    <h5>Closest relationships</h5>
+    <h5>Informational advantage in transactional relationships</h5>
       <img data-src='images/plot_7.png' height="80%" style="border:none">
+  </section>
+  <section>
+    <h5>To continue to transact while not trusting one entity to do it requires distribution of trust</h5>
+    <h5 class="fragment highlight-red">Distributed trust systems and society</h5>
   </section>
 </section>
 <section>
@@ -154,7 +153,7 @@
     <h1>Science and math</h1>
   </section>  
   <section data-markdown>
-    ##### Implemetation of 3 abstract concepts
+    ##### Implementation of 3 abstract concepts
       1. Provide information 
       2. Process information
       3. Receive information
@@ -175,7 +174,7 @@
     ##### These two things are same in terms of the mathematical representation 
       1. They feel different because they have different economic impacts on us
       2. But's only because we attach utility to these things
-      3. If tomrrow, the issue of hunger, learning, shelter were solved, then we would value communication much more
+      3. If tomorrow, the issue of hunger, learning, shelter were solved, then we would value communication much more
       4. A world that values tweets (social interaction) more than money, is not entirely inconceivable
       5. *The math remains the same*
   </section>
@@ -184,9 +183,9 @@
   </section>
   <section data-markdown>
     ##### To do all these things, the institution needs
-    1. Your unique id. They need to know who you are.
-    2. Prior history. 
-    3. Means of communication.
+    1. Your unique id; they need to know who you are
+    2. Prior history 
+    3. Means of communication
   </section>
   <section data-markdown>
     ##### Unique id
@@ -266,7 +265,163 @@
   <section>
     <img class="fragment" data-src="./images/plot_credit_score_encoding_06.png" height="80%" style="border:none">
   </section>
+  <section data-markdown>
+    ##### Blockchain transforms these principles
+    1. There are unique ids. But they cannot be tied to you.
+    2. Information is encoded in blocks of time; transactions are related but not in a hierarchical way
+    3. Still need some form of digital connection
+  </section>
+  <section data-markdown>
+    ## Next, let's cover the unique id bit 
+  </section>
+  <section data-markdown>
+    ##### Cryptographic solution 
+    
+    Is there a way to provide an anonymous unique id, without some else stealing it?
+  </section>
+  <section>
+    <h5>Let's try some solutions given the constraints</h5>
+    <ul>
+	    <li class="fragment fade-in">Provide some existing unique id - email, SSN, Twitter id <span class="fragment fade-in">; doesn't work</li>
+	    <li class="fragment fade-in">Provide a random number<span class="fragment fade-in">; doesn't work</li>
+	    <li class="fragment fade-in">Other solutions?<span class="fragment fade-in"></li>
+    </ul>
+  </section>
+  <section>
+    <h5>To communicate anonymously, the choices are</h5>
+    <ul>
+	    <li class="fragment fade-in">Use some central service provider</li>
+	    <li class="fragment fade-in">Take the risk that someone will steal it</li>
+	    <li class="fragment fade-in">Agree on an algorithm before hand, thus encoding the procedure</li>
+    </ul>
+  </section>
+  <section data-markdown>
+    ##### The private key, public key mechanism provides a solution
+    - Generate a pair of random numbers (pk, sk). THEY BETTER BE RANDOM.
+    - pk: this is the public; meant for sharing
+    - sk: this is your secret key; this is the stuff that gets stolen
+  </section>
+  <section>
+    <h5>Sign using a signature algorithm</h5>
+    <ul>
+      <li class="fragment fade-in">You can sign anything
+	<ul>
+	  <li class="fragment fade-in">Emails</li>
+	  <li class="fragment fade-in">Contracts</li>
+	  <li class="fragment fade-in">Transactions</li>
+	</ul>
+      </li>
+      <li class="fragment fade-in">Inputs are:
+	<ul>
+	  <li class="fragment fade-in">A string of symbols i.e. emails, contracts, transactions</li>
+	  <li class="fragment fade-in">Your secret key to sign the document</li>
+	</ul>
+      </li>
+      <li class="fragment fade-in">Encrypt using some encryption algorithm.</li>
+      <li class="fragment fade-in">Output is:
+	<ul>
+	  <li class="fragment fade-in">A string of symbols (different from the two above)</li>
+	</ul>
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h5>Recipient validates the message</h5>
+    <ul>
+      <li class="fragment fade-in">Validate using
+	<ul>
+	  <li class="fragment fade-in">Your public key</li>
+	  <li class="fragment fade-in">The output from last slide</li>
+	  <li class="fragment fade-in">The actual message</li>
+	</ul>
+      </li>
+      Note that there are different ways of doing this
+    </ul>
+  </section>
+  <section data-markdown>
+    ## So we have the transaction, and unique id covered
+  </section>
+  <section data-markdown>
+    ## Did we miss something?
+  </section>
+  <section>
+    <h5>Remember the credit scoring example</h5>
+    <ul>
+      <li class="fragment fade-in">We haven't discussed the blue square</li>
+      <li class="fragment fade-in">That's because the blue square will need to be implemented outside</li>
+      <li class="fragment fade-in">All this accomplishes two things
+	<ul>
+	  <li class="fragment fade-in">Broadcasting of transactions i.e. peer to peer; there is NO CENTRAL AUTHORITY</li>
+	  <li class="fragment fade-in">This goes along with the idea of anonymous identities</li>
+	</ul>
+      </li>
+      <li class="fragment fade-in">If you think about this for a second, it's unclear whether one can happen without the other</li>
+    </ul>
+  </section>
+  <section>
+    <h2>A system of distributed trust</h2>
+  </section>
+  <section>
+    <h5>Depending on how you view it, this can have material implications</h5>
+    <h3 class="fragment fade-right">We stopped needing our...</h3>
+    <ul>
+      <li class="fragment fade-in">Milkman</li>
+      <li class="fragment fade-in">Mall retailier</li>
+    </ul>
+    <h3 class="fragment fade-right">Next up?...</h3>
+    <ul>
+      <li class="fragment fade-in">Banker?</li>
+      <li class="fragment fade-in">Capital allocator?</li>
+    </ul>
+  </section>
 </section>
+<section>
+  <section>
+    <h1>Mechanics</h1>
+  </section>  
+  <section data-markdown>
+    ##### Mining
+  </section>
+  <section data-markdown>
+    ##### What does it involve?
+     - Listen for transactions
+     - Maintain blockchain and listen for new blocks
+     - Assemble blocks for inclusion
+     - Do a bunch of heavy computing to make block valid
+     - Hope and pray to Fortuna
+     - If you get to add the block to the chain, you get bitcoins?
+  </section>
+  <section data-markdown>
+    ##### Why do it?
+     - Well, why not?
+     - If you believe this holds some future worth and you have capital, why not?
+  </section> 
+  <section>
+    <h5> What does it involve </h5>
+    <img class="fragment" data-src="images/mining_hardware.png" height="80%" style="border:none">
+  </section> 
+  <section>
+    <h5>Who is doing it?</h5>
+    <img class="fragment" data-src="images/bitcoin_nodes_01.png" height="80%" style="border:none">
+  </section> 
+  <section>
+    <h5>Who is doing it?</h5>
+    <img data-src="images/bitcoin_nodes_02.png" height="80%" style="border:none">
+  </section> 
+</section>
+<section>
+  <section>
+    <h1>Coin systems and implications</h1>
+  </section>
+  <section>
+    <h5>It's evolving...</h5>
+    <img data-src="images/bitcoin_forks.png" height="80%" style="border:none">
+  </section>
+  <section>
+    <h1>It's rather unlikely to go away</h1>
+  </section>
+</section>
+
 </div>
 		</div>
 		<script src="js/head.js"></script>
